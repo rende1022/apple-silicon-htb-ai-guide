@@ -533,3 +533,17 @@ This repository is released under the **MIT License**.
 - Apple Developer Documentation
 
 This repository is an independent community effort and is not affiliated with or endorsed by Hack The Box.
+
+## 實作與排錯筆記
+
+- [Malware Image Classification：Notebook 訓練與模型上傳排錯](docs/malware-image-classification-notebook.md)
+
+此筆記記錄 Apple Silicon 環境下使用 PyTorch 與 ResNet50 進行圖片分類的實作流程，包含：
+
+- NumPy 與 PyTorch 相容性問題及暫時繞行方式。
+- Jupyter Notebook 初始化順序與常見 `NameError`。
+- 模型訓練、評估與儲存。
+- checkpoint 與 TorchScript 格式差異。
+- API 上傳時的 `JSONDecodeError` 與 `Invalid model file` 排查。
+
+本次測試集 accuracy 為 **94.47%**；此數值不代表真實環境的偵測能力。模型上傳驗證仍待確認，詳見筆記中的限制與待辦事項。
